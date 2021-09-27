@@ -1,0 +1,246 @@
+.temp-circle{
+    width: 40px;
+    position: fixed;
+    height: 40px;
+    bottom: 4.7rem;
+    right: 4.5rem;
+    z-index: 2;
+    color: white;
+}
+
+.progress-circle{
+    color: white;
+}
+
+#profile{
+    position: fixed;
+    height: 4rem;
+    width: 4rem;
+    border: none;
+    border-radius: 50%;
+    bottom: 7rem;
+    right: 3.8rem;      /*desktop and laptop*/
+    background-color: rgb(139, 139, 139);
+    opacity: 0; 
+    z-index: 2;
+    cursor: default;
+}
+
+.profile2{
+    position: fixed;
+    bottom: 7.4rem;
+    right: 4.3rem;      /*desktop and laptop*/
+    display: block;
+    color: white;
+    font-size: 50px;
+    z-index: 4;
+    cursor: pointer;
+}
+
+
+.upload-btn{
+    position: fixed;
+    bottom: 4rem;
+    right: 4.2rem;      /*desktop and laptop*/
+    width: 2.8rem;
+    opacity: 0;
+    z-index: 2;
+    color: red;
+}
+
+.upload-btn2{
+    position: fixed;
+    bottom: 3.5rem;
+    right: 4.5rem;      /*desktop and laptop*/
+    display: block;
+    color: white;
+    font-size: 40px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.posts-container{
+    margin-top: 8vh;
+    height: 92vh;
+    width: 100vw;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    background-color: black;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%230029ff' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E"); 
+}
+
+.video-card{
+    margin: auto;
+    height: 100%;
+    width: 30rem;
+    position: relative;
+    scroll-snap-align: start;
+}
+
+.video-card video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover
+}
+
+.like{
+    position: absolute;
+    left: 20px;
+    bottom: 10vh;
+    font-size: 40px;
+    color: white;
+    cursor: default;
+}
+
+.liked{
+    color: red;
+}
+
+.comment{
+    position: absolute;
+    left: 80px;
+    bottom: 10vh;
+    font-size: 40px;
+    color: white;
+    cursor: default;
+}
+
+.username{
+    position: absolute;
+    left: 20px;
+    bottom: 20vh;
+    color: white;
+    z-index: 5;
+}
+
+.song{
+    position: absolute;
+    left: 20px;
+    bottom: 16vh;
+    color: white;
+    display: flex;
+    z-index: 5;
+    justify-content: space-around;
+}
+
+.song span{
+    position: absolute;
+    bottom: -2px;
+    left: -2px;
+    z-index: 5;
+}
+
+.some_song{    
+    z-index: 2;
+}
+
+.comment-box{
+    height: 40vh;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    z-index: 6;
+}
+
+.comment-box-close-btn{
+    position: absolute;
+    top: 3px;
+    border: none;
+    right: 18px;
+    color: #0984e3;
+    background-color: rgb(226, 225, 225);
+    border-radius: 50%;
+    width: 5%;
+    height: 9%;
+}
+
+.all-comments{
+    border: 1px solid black;
+    height: 85%;
+    width: 100%;
+    color: black;
+    overflow-y: scroll;
+}
+
+.comment-form{
+    height: 15%;
+}
+
+.comment-form input{
+    height: 100%;
+    width: 80%;
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+
+.comment-form button{
+    height: 100%;
+    width: 20%;
+    border: none;
+    letter-spacing: 1px;
+    color: #0984e3;
+    border: 1px solid rgb(189, 189, 189);
+}
+
+img{
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.all-comments > div{
+    display: flex;
+    padding: 8px;
+}
+
+.all-comments > div > div{
+    margin-left: 20px;
+}
+
+.inner-comment{
+    margin-top: -1rem;
+}
+
+
+@media only screen and (max-width: 480px){
+   
+    .video-card{
+        width: 100vw;
+    }
+    
+    .comment-box-close-btn{
+        width: 6%;
+    }
+
+    .posts-container{
+        background-image: none;
+        background-color: white;
+    }
+    
+    .profile{
+        right: 0.8rem;
+    }
+
+   .profile2{
+       right: 1.3rem;
+        /* background: linear-gradient(45deg, blue 0%,green 25%,#DD2A7B 50%,orange 75%,#F58529 100%); 
+        color: transparent;
+        -webkit-background-clip: text; */
+   }
+
+    .upload-btn{
+        right: 1.2rem;
+    }
+
+    .upload-btn2{
+        right: 1.5rem;
+    }
+
+    .temp-circle{
+        bottom: 1.5rem;
+        right: 3rem;
+    }   
+}

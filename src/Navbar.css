@@ -1,0 +1,123 @@
+@import url('http://fonts.cdnfonts.com/css/billabong');
+    
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+.navbar{
+    position: fixed;
+    top: 0px;
+    height: 8vh;
+    width: 100vw;
+    background-color: white;
+    border-bottom: 1px solid rgba(148, 148, 148, 0.486);
+}
+
+.navbar-logo{
+    font-size: 2.2rem;
+    margin-top: -25px;
+    padding: 0 40px;
+    font-family: 'Billabong', Fright, Sans;
+}
+
+.navbar-input{
+    height: 35px;
+    width: 220px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    border-radius: 3px;
+    outline: none;
+    background-color: rgba(235, 232, 232, 0.212);
+    border: 1px solid rgb(204, 204, 204);
+}
+
+.navbar-input::placeholder{
+    margin-left: 40px;
+    padding-left: 80px;
+}
+
+.navbar-end{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navbar-end li{
+    margin-top: -15px;
+    list-style: none;
+}
+
+.home{
+    margin-top: -3px;
+    margin-right: 40px;
+    font-size: 40px;
+    color: black;
+}
+
+.logout-btn{
+    background-color: red;
+    position: fixed;
+    right: 5.3rem;
+    top: 1rem;
+    opacity: 0;
+}
+
+.logout-btn2{
+    margin-right: 100px;
+    font-size: 35px;
+}
+
+
+@media only screen and (min-width: 450px) and (max-width: 750px){
+    .navbar-logo{
+        margin-top: -6px;
+    }
+
+    .navbar-input{
+        display: none;
+    }
+
+    .navbar-end{
+        margin-top: 15px;
+    }
+
+    .logout{
+        margin-top: 1px;
+    }
+}
+
+@media only screen and (max-width: 450px){
+
+    .logout-btn{
+        margin-left: 20%;
+        width: 4rem;
+        /* opacity: 1; */
+    }
+    
+    .navbar-logo{
+        font-size: 1.8rem;
+        margin-top: 1px;
+    }
+
+    .navbar-input{
+        display: none;
+    }
+
+    .navbar-end{
+        margin-left: 190px;
+        font-size: 20px;
+        margin-top: -28px;
+
+    }
+}
+
+@media only screen and (max-width: 400px){
+ 
+    .logout-btn{
+        right: 14%;
+        width: 2rem;
+        /* opacity: 1; */
+    }
+}

@@ -1,0 +1,217 @@
+@import url('http://fonts.cdnfonts.com/css/billabong');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.full-area{
+    width: 100vw;
+    height: 100vh;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    padding-top: 2.2rem;
+    overflow: hidden;
+}
+
+.login-area{
+    height: 36rem;
+    width: 22rem;
+}
+
+.login{
+    margin-bottom: 0.5rem;
+    height: 65%;
+    width: 100%;
+    background-color: white;
+    border: 1px solid rgb(219, 219, 219);
+}
+
+.insta-heading{
+    margin: 22px 5.5rem 12px;
+    height: 51px;
+    width: 175px;
+    font-size: 3.5rem;
+    font-family: 'Billabong', Fright, Sans;
+}
+
+.login-input{
+    height: 77%;
+    max-width: 350px;
+    width: 100%;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.in-login-form{             /*.igw ==> .in-login-form*/
+    margin-top: 24px;
+    flex: 0 0 auto;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.input-one{                 /*.mzz ==> .input-one*/
+    margin: 0 40px 6px;
+}
+
+.input-one input{
+    display: flex;
+    height: 40px;
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 3px;
+    background-color: #fafafa;
+}
+
+.input-one input::placeholder{
+    font-size: 12px;
+}
+
+.login-btn{
+    margin-top: 10px;
+    height: 30px;
+    width: 100%;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    background-color: #0095f6;
+}
+
+.kaju{
+    margin: 20px 40px 18px;
+    display: flex;
+    flex-direction: row;
+}
+
+.kaju1{
+    background-color: #ebebeb;
+    width: 45%;
+    height: 1px;
+    position: relative;
+    top: .45em;
+}
+
+.kaju2{
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 15px;
+    margin: 0 18px;
+    text-transform: uppercase;
+    color: #98969f;
+}
+
+.kaju3{
+    background-color: #ebebeb;
+    width: 45%;
+    height: 1px;
+    position: relative;
+    top: .45em;
+}
+
+.sign-in-google{                          /*mzz2 == sign-in-google*/
+    display: flex;
+    flex-direction: row;
+    margin: 8px 90px;
+}
+
+.login-with-google{
+    width: 100%;
+    margin-top: -5px;
+    border: none;
+    background-color: rgb(255, 255, 97);
+}
+
+.forgot-pass{
+    color: black;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 14px;
+    margin-top: 12px;
+    cursor: default;
+}
+
+.signup{
+    height: 13%;
+    width: 100%;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 1px;
+    margin: 0 0 10px;
+    padding: 10px 0;
+}
+
+.in-signup{                    /*uhw == in-signup*/
+    margin: -3px 0 -4px;
+}
+
+.no-account{               /*izu == no-account*/
+    color: #262626;
+    font-size: 14px;
+    margin: 18px;
+    text-align: center;
+}
+
+
+.sign-up{                   /*uhws == sign-up*/
+    display: inline;
+    margin: 4px;
+    color: #0095f6;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration: none;
+    cursor: default;
+}
+
+
+.get-app{
+    height: 19%;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.get-the-app-para{           /*bngn == get-the-app-para*/
+    color: #262626;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 10px 20px 10px 20px;
+    text-align: center;
+}
+
+.get-app-icons{                     /*iny == get-app-icons*/
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.stores{
+    margin: 6px 60px 120px 60px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 350px){
+   .full-area{
+       background-color: white;
+   }
+
+   .login,
+   .signup{
+       border: none;
+   }
+}
