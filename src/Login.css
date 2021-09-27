@@ -210,6 +210,11 @@
        background-color: white;
    }
 
+   
+    .insta-heading{
+        margin: 22px 3.7rem 12px;
+    }
+
    .login,
    .signup{
        border: none;
