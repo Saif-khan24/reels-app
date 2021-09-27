@@ -210,6 +210,10 @@ img{
     .video-card{
         width: 100vw;
     }
+
+    .comment-box{
+        bottom: 6vh;
+    }
     
     .comment-box-close-btn{
         width: 6%;
