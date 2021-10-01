@@ -3,6 +3,7 @@ import Home from './Home';
 import Profile from './Profile';
 import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import AuthProvider from './AuthProvider';
+import Signup from './Signup';
 
 function App()
 {
@@ -17,6 +18,11 @@ function App()
                         <Route path='/profile'>
                             <Profile />
                         </Route>
+
+                        <Route path='/signup'>
+                            <Signup />
+                        </Route>
+
                         <Route path='/'>
                             <Login />
                         </Route>

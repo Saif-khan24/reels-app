@@ -168,6 +168,8 @@
     display: inline;
     margin: 4px;
     color: #0095f6;
+    border: none;
+    background-color: white;
     font-weight: 600;
     font-size: 14px;
     line-height: 18px;

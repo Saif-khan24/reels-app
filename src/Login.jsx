@@ -1,6 +1,7 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Redirect } from 'react-router-dom';
-import { signInWithGoogle } from './firebase';
+import { auth, signInWithGoogle } from './firebase';
+import { useHistory } from 'react-router';
 
 import { AuthContext } from './AuthProvider';
 import './Login.css';
@@ -8,6 +9,9 @@ import './Login.css';
 let Login = () =>{
 
     let value = useContext(AuthContext);
+    let history = useHistory();
+    let [email, setEmail] = useState("");
+    let [password, setPassword] = useState("");
 
     return (
         <div>
@@ -21,13 +25,39 @@ let Login = () =>{
                             <div className="login-form">
                                 <div className="in-login-form">
                                     <div className="input-one">
-                                        <input placeholder="Phone number, username or email address" disabled/>
+                                    <input
+                                       placeholder="Phone number, username or email address"
+                                       type="email"
+                                       value={email}
+                                       onChange={(e)=>{
+                                            setEmail(e.currentTarget.value);
+                                       }}
+                                    />
+                                        {/* <input placeholder="Phone number, username or email address" disabled/> */}
                                     </div>
                                     <div className="input-one">
-                                        <input placeholder="Password" disabled/>
+                                        <input
+                                          placeholder="Password"
+                                          type="password"
+                                          value={password}
+                                          onChange={(e)=>{
+                                            setPassword(e.currentTarget.value);
+                                          }}
+                                        />
+                                        {/* <input placeholder="Password" disabled/> */}
                                     </div>
                                     <div className="input-one">
-                                        <button className="login-btn" disabled>Log In</button>
+                                        {/* <button className="login-btn" disabled>Log In</button> */}
+                                        <button
+                                          className="login-btn"
+                                           type="submit"
+                                          onClick={(e)=>{
+                                            e.preventDefault();
+                                            auth.signInWithEmailAndPassword(email, password);
+                                          }}
+                                        >
+                                        Log In
+                                        </button>
                                     </div>
                                     <div className="kaju">
                                         <div className="kaju1"></div>
@@ -54,11 +84,21 @@ let Login = () =>{
                         <div className="in-signup">
                             <p className="no-account">
                                 Don't have an account?
-                                <a href="/#">
+                                {/* <a href="/#">
                                     <span className="sign-up">
                                         Sign up
                                     </span>
-                                </a>
+                                </a> */}
+                                <button
+                                // type="submit"
+                                className="sign-up"
+                                onClick={(e)=>{
+                                    //e.preventDefault();      //either use it or comment type="submit"
+                                    history.push('./signup');
+                                }}
+                                >
+                                Sign Up
+                                </button>
                             </p>
                         </div>
                     </div>
