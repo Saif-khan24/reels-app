@@ -3,6 +3,8 @@ import { Redirect } from "react-router";
 import { auth } from "./firebase";
 import { useContext } from 'react';
 import { AuthContext } from './AuthProvider';
+import './Signup.css';
+
 
 let Signup = ()=>{
     let [email, setEmail] = useState("");
@@ -14,7 +16,7 @@ let Signup = ()=>{
         <>
         {value ? <Redirect to='/' /> : ""}
         <div className="row">
-            <div className="col-4">
+            <div className="col">
 
 
             <form className="m-4">
